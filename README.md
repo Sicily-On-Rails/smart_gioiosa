@@ -1,6 +1,6 @@
 ## README
 
-Smart Gioiosa is a project smart city.
+Smart Gioiosa is a smart city project.
 
 * Ruby version: 2.3.0
 
@@ -9,7 +9,7 @@ Smart Gioiosa is a project smart city.
 This is a rails api application, new feauture in ruby on rails 5 
 
 ```console
-rails new  my_app --api
+rails new  my_api --api
 ```
 
 
