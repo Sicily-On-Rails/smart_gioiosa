@@ -1,24 +1,15 @@
 ## README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Smart Gioiosa is a project smart city.
 
-Things you may want to cover:
+* Ruby version: 2.3.0
 
-* Ruby version
+* Rails version: 5.0.0.beta3
 
-* System dependencies
+This is a rails api application, new feauture in ruby on rails 5 
 
-* Configuration
+```console
+rails new  my_app --api
+```
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
