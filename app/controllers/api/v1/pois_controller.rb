@@ -1,9 +1,8 @@
 class Api::V1::PoisController < ApplicationController
   before_action :set_poi, only: [:show]
   
-
   def index
-    @pois = Poi.all
+    @pois = Poi.all.order(:id)
     render json: @pois
   end
   
