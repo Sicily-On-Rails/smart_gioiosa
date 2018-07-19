@@ -23,6 +23,11 @@ doc/
 /public/uploads/*
 /config/secrets.yml
 
+ Ignore uploaded files in development
+/storage/*
+
+ Ignore master key for decrypting credentials and more.
+/config/master.key
 
 # Ignore Byebug command history file.
 .byebug_history
