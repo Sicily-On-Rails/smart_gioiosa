@@ -25,6 +25,7 @@ doc/
 
  Ignore uploaded files in development
 /storage/*
+!/storage/.keep
 
 # Ignore Byebug command history file.
 .byebug_history
