@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180328134122) do
+ActiveRecord::Schema.define(version: 2019_03_05_135138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "places", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pois", force: :cascade do |t|
     t.string "name"
@@ -22,7 +29,10 @@ ActiveRecord::Schema.define(version: 20180328134122) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+    t.bigint "place_id"
     t.index ["name"], name: "index_pois_on_name", unique: true
+    t.index ["place_id"], name: "index_pois_on_place_id"
   end
 
+  add_foreign_key "pois", "places"
 end

@@ -2,12 +2,18 @@ class Api::V1::PoisController < ApplicationController
   before_action :set_poi, only: [:show, :update, :destroy]
   
   def index
-    pois = Poi.all
-    render json: PoiSerializer.new(pois).serialized_json
+    if params[:place_id]
+      @place = Place.find(params[:place_id])
+      @pois = @place.pois
+      render json: PoiSerializer.new(@pois).serialized_json
+    else
+      @pois = Poi.all
+      render json: PoiSerializer.new(@pois).serialized_json
+    end
   end
   
   def show
-    render json: @poi
+    render json: PoiSerializer.new(@poi).serialized_json
   end
 
   def create
