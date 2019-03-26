@@ -7,7 +7,7 @@ class Api::V1::PlacesController < ApplicationController
   end
 
   def show
-    render json: PlaceSerializer.new(@place).serialized_json, include: [:pois]
+    render json: PlaceSerializer.new(@place).serialized_json #, include: [:pois]
   end
 
   def create 
