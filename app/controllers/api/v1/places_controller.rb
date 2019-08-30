@@ -3,11 +3,12 @@ class Api::V1::PlacesController < ApplicationController
   
   def index
     @places = Place.all
-    render json: PlaceSerializer.new(@places).serialized_json
+    render json: PlaceSerializer.new(@places).serializable_hash
   end
 
   def show
-    render json: PlaceSerializer.new(@place).serialized_json #, include: [:pois]
+    #options = {include: [:points]}
+    render json: PlaceSerializer.new(@place).serializable_hash #, include: [:pois]
   end
 
   def create 

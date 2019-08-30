@@ -13,7 +13,8 @@ class Api::V1::PointsController < ApplicationController
   end
   
   def show
-    render json: PointSerializer.new(@point).serialized_json
+    options = {include: [:place]}
+    render json: PointSerializer.new(@point, options).serializable_hash
   end
 
   def create
