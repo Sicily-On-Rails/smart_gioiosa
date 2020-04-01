@@ -24,7 +24,7 @@ class Api::V1::PlacesController < ApplicationController
     if @place.update(place_params)
       render json: @place, status: :ok
     else
-      render json: {errors: @plcae.errors}, status: :unprocessable_entity
+      render json: {errors: @place.errors}, status: :unprocessable_entity
     end
   end
 
